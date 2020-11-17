@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { Col } from "reactstrap";
+import { firebaseConfig } from "../../firebaseConfig";
+import firebase from "firebase/app";
+import "firebase/firebase-database";
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
 
 const MembershipDone = () => {
   const [disappear, setDisappear] = useState(false);
@@ -10,6 +15,9 @@ const MembershipDone = () => {
   useEffect(() => {
     setTimeout(() => {
       if (!disappear) {
+        let data = localStorage.getItem("formData");
+        data = JSON.parse(data);
+        database.ref(data.firstname + " " + data.lastname).set(data);
         localStorage.removeItem("formData");
         setDisappear(!disappear);
         dispatch({ type: "next", payload: { nextNo: 2 } });
