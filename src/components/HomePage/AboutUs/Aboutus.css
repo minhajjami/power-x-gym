@@ -1,0 +1,11 @@
+.imgSize img{
+  height: 500px;
+  height: 500px;
+  width: 90%;
+}
+.right h1{
+  color: lightgrey;
+  font-weight: bold;
+  font-size: 400%;
+  margin-bottom: 10%;
+}

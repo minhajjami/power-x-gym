@@ -1,0 +1,28 @@
+
+.workOut{
+  height: 600px;
+}
+
+.img-1{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../../../resources/Images/hipcravo-5UbIqV58CW8-unsplash.jpg');
+  background-size: 100%, 100%;   
+  
+
+}
+.img-2{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../../../resources/Images/daniel-apodaca-WdoQio6HPVA-unsplash.jpg');
+  background-size: 100%, 140%;  
+  
+}
+.img-3{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../../../resources/Images/penguinuhh-8VI6WwEEEHw-unsplash.jpg');
+  background-size: 100%, 100%;  
+  
+}
+
+.card-body{
+  height: 350px;
+  color: white;
+  background-repeat: no-repeat;
+  margin-bottom: 10%;
+}
