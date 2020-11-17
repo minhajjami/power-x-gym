@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { Col } from "reactstrap";
 
 const MembershipDone = () => {
   const [disappear, setDisappear] = useState(false);
   const history = useHistory();
-
+  const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
       if (!disappear) {
         localStorage.removeItem("formData");
         setDisappear(!disappear);
+        dispatch({ type: "next", payload: { nextNo: 2 } });
         history.push("/");
       }
     }, 2000);
-  }, [disappear, history]);
+  }, [disappear, history, dispatch]);
   return (
     <>
       {!disappear && (

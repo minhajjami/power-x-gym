@@ -9,10 +9,10 @@ const Payment = () => {
   return (
     <>
       <Container fluid className="p-0 m-0">
-        <form className="row justify-content-center p-0 m-0">
+        <div className="row justify-content-center p-0 m-0">
           <CreditCard />
           <Paypal />
-        </form>
+        </div>
       </Container>
     </>
   );
